@@ -1,5 +1,5 @@
 from django.contrib.auth import get_user_model
-from home.models import Cvvrt,Fnvn
+from home.models import Cvvrt,Fnvn,Fvdf
 from django.http import HttpRequest
 from django.utils.translation import ugettext_lazy as _
 from allauth.account import app_settings as allauth_settings
@@ -86,4 +86,10 @@ class CvvrtSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Cvvrt
+        fields = "__all__"
+
+class FvdfSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Fvdf
         fields = "__all__"

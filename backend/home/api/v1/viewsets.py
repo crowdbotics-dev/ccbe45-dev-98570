@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from home.models import Cvvrt,Fnvn
-from .serializers import CvvrtSerializer,FnvnSerializer
+from home.models import Cvvrt,Fnvn,Fvdf
+from .serializers import CvvrtSerializer,FnvnSerializer,FvdfSerializer
 from rest_framework import authentication
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from rest_framework.viewsets import ModelViewSet, ViewSet
@@ -42,3 +42,8 @@ class CvvrtViewSet(viewsets.ModelViewSet):
     serializer_class = CvvrtSerializer
     authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
     queryset = Cvvrt.objects.all()
+
+class FvdfViewSet(viewsets.ModelViewSet):
+    serializer_class = FvdfSerializer
+    authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
+    queryset = Fvdf.objects.all()

@@ -9,3 +9,6 @@ class Fnvn(models.Model):
 class Cvvrt(models.Model):
     'Generated Model'
     xswe = models.BigIntegerField()
+class Fvdf(models.Model):
+    'Generated Model'
+    nvnv45 = models.BigIntegerField()

@@ -42,6 +42,24 @@ function api_v1_fnvn_partial_update(payload) {
 function api_v1_fnvn_destroy(payload) {
   return ccbedevAPI.delete(`/api/v1/fnvn/${payload.id}/`)
 }
+function api_v1_fvdf_list(payload) {
+  return ccbedevAPI.get(`/api/v1/fvdf/`)
+}
+function api_v1_fvdf_create(payload) {
+  return ccbedevAPI.post(`/api/v1/fvdf/`, payload)
+}
+function api_v1_fvdf_retrieve(payload) {
+  return ccbedevAPI.get(`/api/v1/fvdf/${payload.id}/`)
+}
+function api_v1_fvdf_update(payload) {
+  return ccbedevAPI.put(`/api/v1/fvdf/${payload.id}/`, payload)
+}
+function api_v1_fvdf_partial_update(payload) {
+  return ccbedevAPI.patch(`/api/v1/fvdf/${payload.id}/`, payload)
+}
+function api_v1_fvdf_destroy(payload) {
+  return ccbedevAPI.delete(`/api/v1/fvdf/${payload.id}/`)
+}
 function api_v1_login_create(payload) {
   return ccbedevAPI.post(`/api/v1/login/`, payload)
 }
@@ -95,6 +113,12 @@ export const apiService = {
   api_v1_fnvn_update,
   api_v1_fnvn_partial_update,
   api_v1_fnvn_destroy,
+  api_v1_fvdf_list,
+  api_v1_fvdf_create,
+  api_v1_fvdf_retrieve,
+  api_v1_fvdf_update,
+  api_v1_fvdf_partial_update,
+  api_v1_fvdf_destroy,
   api_v1_login_create,
   api_v1_signup_create,
   rest_auth_login_create,

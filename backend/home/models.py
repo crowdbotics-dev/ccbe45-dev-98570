@@ -11,5 +11,5 @@ class Cvvrt(models.Model):
     xswe = models.BigIntegerField()
 class Fvdf(models.Model):
     'Generated Model'
-    nvnv45 = models.BigIntegerField()
-    addf = models.BigIntegerField(null=True,blank=True,)
+    nvnv45 = models.BigIntegerField(blank=True,)
+    addf466 = models.BigIntegerField(null=True,blank=True,)

@@ -6,6 +6,24 @@ const ccbedevAPI = axios.create({
 function api_docs_schema_retrieve(payload) {
   return ccbedevAPI.get(`/api-docs/schema/`, { params: { lang: payload.lang } })
 }
+function api_v1_cvvrt_list(payload) {
+  return ccbedevAPI.get(`/api/v1/cvvrt/`)
+}
+function api_v1_cvvrt_create(payload) {
+  return ccbedevAPI.post(`/api/v1/cvvrt/`, payload)
+}
+function api_v1_cvvrt_retrieve(payload) {
+  return ccbedevAPI.get(`/api/v1/cvvrt/${payload.id}/`)
+}
+function api_v1_cvvrt_update(payload) {
+  return ccbedevAPI.put(`/api/v1/cvvrt/${payload.id}/`, payload)
+}
+function api_v1_cvvrt_partial_update(payload) {
+  return ccbedevAPI.patch(`/api/v1/cvvrt/${payload.id}/`, payload)
+}
+function api_v1_cvvrt_destroy(payload) {
+  return ccbedevAPI.delete(`/api/v1/cvvrt/${payload.id}/`)
+}
 function api_v1_fnvn_list(payload) {
   return ccbedevAPI.get(`/api/v1/fnvn/`)
 }
@@ -65,6 +83,12 @@ function rest_auth_user_partial_update(payload) {
 }
 export const apiService = {
   api_docs_schema_retrieve,
+  api_v1_cvvrt_list,
+  api_v1_cvvrt_create,
+  api_v1_cvvrt_retrieve,
+  api_v1_cvvrt_update,
+  api_v1_cvvrt_partial_update,
+  api_v1_cvvrt_destroy,
   api_v1_fnvn_list,
   api_v1_fnvn_create,
   api_v1_fnvn_retrieve,

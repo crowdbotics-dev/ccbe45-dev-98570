@@ -6,6 +6,7 @@ class Fnvn(models.Model):
     ryey = models.BigIntegerField()
     fggrr = models.BigIntegerField()
     rel_cvvrt_1_1 = models.OneToOneField("home.Cvvrt",null=True,blank=True,on_delete=models.CASCADE,related_name="fnvn_rel_cvvrt_1_1",)
+    rel_fvdf_1_1 = models.OneToOneField("home.Fvdf",blank=True,null=True,on_delete=models.CASCADE,related_name="fnvn_rel_fvdf_1_1",)
 class Cvvrt(models.Model):
     'Generated Model'
     xswe = models.BigIntegerField()

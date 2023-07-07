@@ -5,3 +5,6 @@ class Fnvn(models.Model):
     cvcbc = models.BigIntegerField()
     ryey = models.BigIntegerField()
     fggrr = models.BigIntegerField()
+class Cvvrt(models.Model):
+    'Generated Model'
+    xswe = models.BigIntegerField()
